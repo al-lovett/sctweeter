@@ -8,14 +8,14 @@
                 <div class="card-header">Dashboard
                     <form class="" action="/tweet" method="post">
                         @csrf
-                        <textarea name="tweet" rows="10" cols="100"></textarea><br />
+                        <textarea name="tweet" rows="10" cols="80"></textarea><br />
 
                         <button class="btn-primary"type="submit" name="button">SCTweet Now</button>
                     </form>
 
                     <br>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" style="text-align: center; display:inline-block">
                     ScTweeter    @foreach($tweets as $tweet)
                             {{$tweet->tweet}} <br>
 
@@ -25,23 +25,21 @@
                                 <br>
 
                         @endforeach
-
-                        <div class="col-md-8">
+                        <div class="col-md-8" style="text-align: center; display:inline-block">
                             <form action="/comment" method="post">
                                 @csrf
-                                <input type="hidden" name="tweet_id" value="{{ $tweet->id}}">
-                                    <textarea name="comment"> </textarea>
-                                <button class="btn-primary" type="submit">Comment Below SCTweet</button>
+                                <input type="hidden" name="tweet_id" value="{{ $tweet->id}}"><br>
+                                    <textarea name="comment"> </textarea><br>
+                                <button class="btn-primary" type="submit"style="text-align: center;">Comment Below SCTweet</button>
                             </form>
 
-                            <form action="/edittweet/{{$tweet->id}}" method="get">
-                                <input type="hidden" name="" value="{{$tweet->id}}">
+                            <form action="/editTweet/{{$tweet->id}}/edit" method="get">
+                                <input type="hidden" name="tweetId" value="{{$tweet->id}}">
                                 <button class="btn-primary"type="submit">Edit SCTweet</button>
                             </form>
 
                         </div>
                     @endforeach
-
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">

@@ -10,21 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function() {
+  return view('splash');
+});
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome1');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'TweetsController@index')->name('home');
 
 Route::post('/tweet', 'TweetsController@savetweet');
 
 Route::post('/comment', 'TweetsController@savecomment');
 
-Route::get('/edittweet/{id}', 'TweetsController@edittweet');
+// old route to edittweet
+// Route::get('/edittweet/{id}', 'TweetsController@edittweet');
 
+Route::get('/editTweet/{id}/edit', 'TweetsController@editTweet')->name( 'editTweet');
 
+Route::post('/editTweet/{id}/edit', 'TweetsController@update')->name( 'editTweet');
 
 // ('/tweet/{tweet}/edit', 'TweetsController@edittweet');
