@@ -40,7 +40,7 @@
 
                                 <h1>SCTweeter - Sapientia Commutationem - Wisdom Exchange</h1>
                                 <h3>Hello and Welcome to the webs first social media wisdom exchange!</h3>
-                                <img src="SC.jpg" style="float:left;">1. “Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.” – Albert Einstein <br> <br>
+                                <img src="images/SC.jpg" style="float:left;">1. “Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.” – Albert Einstein <br> <br>
 
 2. Before you diagnose yourself with depression or low self-esteem, first make sure that you are not, in fact, just surrounded by assholes.” – Sigmund Freud<br> <br>
 
@@ -97,7 +97,7 @@
 28. “The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.” – Albert Einstein<br> <br>
 
 29. “Happiness is like a butterfly. The more you chase it, the more it eludes you. But if you turn your attention to other things, it comes and sits softly on your shoulder.” – Henry David Thoreau<br> <br>
-                            
+
 
                              </div>
                         </div>
