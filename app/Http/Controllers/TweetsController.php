@@ -35,21 +35,6 @@ class TweetsController extends Controller
         return redirect('/home');
     }
 
-public function savecomment(Request $request){
-
-        $user = Auth::user();
-        $userId = $user->id;
-        $newComment = $request->comment;
-        $tweet_Id = $request->tweet_id;
-
-        $commentModel = new Comment();
-        $commentModel->user_id = $userId;
-        $commentModel->tweet_Id = $tweet_Id;
-        $commentModel->comments = $newComment;
-        $commentModel->save();
-
-        return redirect('/home');
-}
 
 public function editTweet($tweetId){  // edittweet/{id}
         // DD($tweetId);

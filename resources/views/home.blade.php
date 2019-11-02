@@ -22,7 +22,10 @@
                         <h4>Comments</h4>
                             @foreach($tweet->comment as $comment)
                                 {{  $comment->comments }}
+                                <a class="btn-primary" type="submit" href="/editcomment/{{$comment->id}}/edit">Edit Comment</a>
                                 <br>
+
+
 
                         @endforeach
                         <div class="col-md-8" style="text-align: center; display:inline-block">
@@ -37,6 +40,7 @@
                                 <input type="hidden" name="tweetId" value="{{$tweet->id}}">
                                 <button class="btn-primary"type="submit">Edit SCTweet</button>
                             </form>
+
 
                         </div>
                     @endforeach

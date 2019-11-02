@@ -24,7 +24,13 @@ Route::get('/home', 'TweetsController@index')->name('home');
 
 Route::post('/tweet', 'TweetsController@savetweet');
 
-Route::post('/comment', 'TweetsController@savecomment');
+Route::post('/comment', 'CommentsController@savecomment');
+
+Route::post('editcomment/{id}/destroy', 'CommentsController@destroy')->name( 'comment.destroy');
+
+Route::get('/editcomment/{id}/edit', 'CommentsController@editcomment')->name( 'editcomment');
+
+Route::post('/editcomment/{id}/edit', 'CommentsController@update')->name( 'editcomment');
 
 Route::post('edittweet/{id}/destroy', 'TweetsController@destroy')->name( 'tweet.destroy');
 
