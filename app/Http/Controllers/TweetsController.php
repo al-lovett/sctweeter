@@ -35,21 +35,21 @@ class TweetsController extends Controller
         return redirect('/home');
     }
 
-// public function savecomment(Request $request){
-//
-//         $user = Auth::user();
-//         $userId = $user->id;
-//         $newComment = $request->comment;
-//         $tweet_Id = $request->tweet_id;
-//
-//         $commentModel = new Comment();
-//         $commentModel->user_id = $userId;
-//         $commentModel->tweet_Id = $tweet_Id;
-//         $commentModel->comments = $newComment;
-//         $commentModel->save();
-//
-//         return redirect('/home');
-// }
+public function savecomment(Request $request){
+
+        $user = Auth::user();
+        $userId = $user->id;
+        $newComment = $request->comment;
+        $tweet_Id = $request->tweet_id;
+
+        $commentModel = new Comment();
+        $commentModel->user_id = $userId;
+        $commentModel->tweet_Id = $tweet_Id;
+        $commentModel->comments = $newComment;
+        $commentModel->save();
+
+        return redirect('/home');
+}
 
 public function editTweet($tweetId){  // edittweet/{id}
         // DD($tweetId);
@@ -86,7 +86,18 @@ public function update(Request $request, $tweetId){  // edittweet/{id}
 //     // $edittweet = $request->
 //     // $edittweet = Tweet::all();
 //      return view('edittweet/{id}', compact('tweets'));
-}}
+}
+public function destroy($tweetid)
+        {
+            //
+            $tweet = Tweet::find( $tweetid );
+            $tweet->delete();
+
+            return redirect()->route( 'home' );
+        }
+}
+
+
 // public function editTweet(Request $request){
 // }
 //     var_dump(all);

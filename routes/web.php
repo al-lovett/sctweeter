@@ -26,6 +26,8 @@ Route::post('/tweet', 'TweetsController@savetweet');
 
 Route::post('/comment', 'TweetsController@savecomment');
 
+Route::post('edittweet/{id}/destroy', 'TweetsController@destroy')->name( 'tweet.destroy');
+
 // old route to edittweet
 // Route::get('/edittweet/{id}', 'TweetsController@edittweet');
 

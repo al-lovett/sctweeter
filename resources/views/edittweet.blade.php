@@ -11,7 +11,10 @@
 
         <button type="submit" name="button">Update SCTweet</button>
     </form>
-
+    <form method="POST" action="{{ route( 'tweet.destroy', $tweet->id ) }}">
+      @csrf
+        <input type="submit" name="delete" value="Delete Tweet">
+    </form>
 
 </div>
 
