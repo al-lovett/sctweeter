@@ -55,6 +55,7 @@
 
                         You are logged in!
                         @endsection
+                        <a href="{{ url('/profiles') }}">User Profile Page</a>
                     </div>
                 </div>
             </div>

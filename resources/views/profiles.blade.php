@@ -15,6 +15,11 @@
               Edit User Profile
             </a>
         @endforeach
+<br>
+<br>
+<br>
+
+<a href="{{ route( 'home' ) }}">Home Page</a>
 
   </body>
 </html>
