@@ -42,3 +42,7 @@ Route::get('/editTweet/{id}/edit', 'TweetsController@editTweet')->name( 'editTwe
 Route::post('/editTweet/{id}/edit', 'TweetsController@update')->name( 'editTweet');
 
 // ('/tweet/{tweet}/edit', 'TweetsController@edittweet');
+
+Route::get('/profiles', 'UserProfilesController@index');
+
+Route::get('/profiles/{id}', 'UserProfilesController@update');
