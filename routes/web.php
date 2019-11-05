@@ -11,12 +11,12 @@
 |
 */
 Route::get('/', function() {
-  return view('splash');
+  return view('welcome1');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome1');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome1');
+// });
 
 Auth::routes();
 
