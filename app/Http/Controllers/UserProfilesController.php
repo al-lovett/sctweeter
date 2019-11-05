@@ -62,6 +62,7 @@ class UserProfilesController extends Controller
     public function edit($id)
     {
         //
+        return view ('profilesupdate/{id}');
     }
 
     /**
@@ -74,6 +75,14 @@ class UserProfilesController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $user = User::find($id);
+
+        $user->id = $request->id;
+        $user->users = $request->id;
+
+        $user->save();
+
+        return redirect()->route( 'home' );
     }
 
     /**

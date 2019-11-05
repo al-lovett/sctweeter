@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title></title>
+    <title>Sctweeter</title>
   </head>
   <body>
 
