@@ -15,16 +15,16 @@
     <body>
 
         <div id="splash" class="container-fluid">
-          <div id="right-hm" style="text-align:center; font-size: 50px;">
+          <div id="" style="text-align:center; font-size: 50px;">
               @if (Route::has('login'))
 
                       @auth
-                          <a href="{{ url('/home') }}" class="badge badge-secondary">ScTweet Wisdom Starts Here!!</a>
+                          <a href="{{ url('/home') }}" class="btn btn-primary" role="button">Wisdom Starts Here!!</a>
                       @else
-                          <a href="{{ route('login') }}" class="homepagelink">Login</a>
+                          <a href="{{ route('login') }}" class="btn btn-primary" role="button">Login</a>
 
                           @if (Route::has('register'))
-                              <a href="{{ route('register') }}" class="homepagelink">Register</a>
+                              <a href="{{ route('register') }}" class="btn btn-primary" role="button">Register</a>
                           @endif
                       @endauth
 
@@ -35,7 +35,7 @@
 
 
           <h3>Hello and Welcome to the webs first social media wisdom exchange!</h3>
-          <img src="images/SC.jpg" alt="The Creation of Adam by Michelangelo"> <br> <br>
+          <img src="images/SC.jpg" alt="The Creation of Adam by Michelangelo" class="responsive"> <br> <br>
 
 
 
