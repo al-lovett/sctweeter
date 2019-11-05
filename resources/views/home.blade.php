@@ -22,7 +22,7 @@
                         <h4>Comments</h4>
                             @foreach($tweet->comment as $comment)
                                 {{  $comment->comments }}
-                                <button class="btn btn-primary" type="submit" href="/editcomment/{{$comment->id}}/edit">Edit Comment</button>
+                                <a class="badge badge-primary" type="submit" href="/editcomment/{{$comment->id}}/edit">Edit Comment</a>
                                 <br>
 
 
@@ -55,7 +55,7 @@
 
                         You are logged in!
                         @endsection
-                        <button id="userprofile" class="btn btn-info" href="{{ url('/profiles') }}">User Profile Page</button>
+                        <a id="userprofile" class="badge badge-primary" href="{{ url('/profiles') }}">User Profile Page</a>
                     </div>
                 </div>
             </div>

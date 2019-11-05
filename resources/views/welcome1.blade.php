@@ -19,12 +19,12 @@
               @if (Route::has('login'))
 
                       @auth
-                          <a href="{{ url('/home') }}">ScTweet Wisdom Starts Here!!</a>
+                          <a href="{{ url('/home') }}" class="badge badge-secondary">ScTweet Wisdom Starts Here!!</a>
                       @else
-                          <a href="{{ route('login') }}">Login</a>
+                          <a href="{{ route('login') }}" class="homepagelink">Login</a>
 
                           @if (Route::has('register'))
-                              <a href="{{ route('register') }}">Register</a>
+                              <a href="{{ route('register') }}" class="homepagelink">Register</a>
                           @endif
                       @endauth
 
