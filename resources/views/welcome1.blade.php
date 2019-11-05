@@ -13,7 +13,7 @@
 
     </head>
     <body>
-        <div id="right-hm" style="text-align:center; font-size: 30px;">
+        <div id="right-hm" style="text-align:center; font-size: 50px;">
             @if (Route::has('login'))
 
                     @auth
