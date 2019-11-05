@@ -1,44 +1,44 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <!-- <div class="row justify-content-center"> -->
-        <div class="col-md-12">
-            <div class="card">
+        <div class="">
+            <div class="">
                 <div class="card-header">Dashboard
                     <form class="" action="/tweet" method="post">
                         @csrf
                         <textarea name="tweet" rows="10" cols="80"></textarea><br />
 
-                        <button class="btn-primary"type="submit" name="button">SCTweet Now</button>
+                        <button class="btn btn-success"type="submit" name="button">SCTweet Now</button>
                     </form>
 
                     <br>
 
-                    <div class="col-lg-6" style="text-align: center; display:inline-block">
+                    <div class="">
                     ScTweeter    @foreach($tweets as $tweet)
                             {{$tweet->tweet}} <br>
 
                         <h4>Comments</h4>
                             @foreach($tweet->comment as $comment)
                                 {{  $comment->comments }}
-                                <a class="btn-primary" type="submit" href="/editcomment/{{$comment->id}}/edit">Edit Comment</a>
+                                <button class="btn btn-primary" type="submit" href="/editcomment/{{$comment->id}}/edit">Edit Comment</button>
                                 <br>
 
 
 
                         @endforeach
-                        <div class="col-md-8" style="text-align: center; display:inline-block">
+                        <div class="">
                             <form action="/comment" method="post">
                                 @csrf
                                 <input type="hidden" name="tweet_id" value="{{ $tweet->id}}"><br>
                                     <textarea name="comment"> </textarea><br>
-                                <button class="btn-primary" type="submit"style="text-align: center;">Comment Below SCTweet</button>
+                                <button class="btn btn-primary" type="submit">Comment Below SCTweet</button>
                             </form>
 
                             <form action="/editTweet/{{$tweet->id}}/edit" method="get">
                                 <input type="hidden" name="tweetId" value="{{$tweet->id}}">
-                                <button class="btn-primary"type="submit">Edit SCTweet</button>
+                                <button class="btn btn-primary"type="submit">Edit SCTweet</button>
                             </form>
 
 
@@ -46,7 +46,7 @@
                     @endforeach
                     <!-- test delete -->
 
-                    <div class="card-body">
+                    <div class="">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -55,7 +55,7 @@
 
                         You are logged in!
                         @endsection
-                        <a href="{{ url('/profiles') }}">User Profile Page</a>
+                        <button id="userprofile" class="btn btn-info" href="{{ url('/profiles') }}">User Profile Page</button>
                     </div>
                 </div>
             </div>
