@@ -19235,6 +19235,30 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var mygiphyAPIKey = '9W5jVaY7kWseQxmqI3eOJtyPapMY7bag';
+Vue.component('giphy-results', {
+  data: function data() {
+    return {
+      apptittle: 'Gif Comments',
+      searchterm: '',
+      giphyResults: {}
+    };
+  },
+  methods: {
+    giphySearch: function giphySearch() {
+      var _this = this;
+
+      axios.get('https://api.giphy.com/v1/gifs/search?api_key=' + mygiphyAPIKey + '&q=' + this.searchterm).then(function (responce) {
+        _this.giphyResults = responce.data.data;
+      });
+    }
+  },
+  template: "\n                                <div id=\"giphy-results\">\n                                  <h1 v-text=\"apptittle\" class=\"title is-1\"></h1>\n                                  <form @submit.prevent=\"giphySearch\">\n                                    <input v-model=\"searchterm\" type=\"search\" class=\"input\"\n                                      placeholder=\"Enter a search term.\">\n                                    <input type=\"submit\" value=\"Submit Search\" class=\"input\">\n                                  </form>\n\n                                  <ul v-for=\"gif in giphyResults\" class=\"columns\">\n                                    <li class=\"column\">\n                                      <a v-bind:src=\"gif.url\" target=\"_blank\">\n                                        <img v-bind:src=\"gif.images.fixed_width.url\"\n                                          v-bind:alt=\"gif.slug\">\n                                      </a>\n                                    </li>\n\n                                  </ul>\n                                </div>\n                              "
+});
+var giphySearch = new Vue({
+  el: '#giphy-search-container'
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
