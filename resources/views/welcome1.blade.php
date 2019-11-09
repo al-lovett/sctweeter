@@ -34,7 +34,7 @@
           <h1 id="headline" alt="the worlds first social media wisdome exchange">Sapientia Commutationem - Wisdom Exchange</h1>
 
 
-          <h3>Hello and Welcome to the webs first social media wisdom exchange!</h3>
+          <h3>Welcome to the webs first social media wisdom exchange!</h3>
           <img src="images/SC.jpg" alt="The Creation of Adam by Michelangelo" class="responsive"> <br> <br>
 
 
