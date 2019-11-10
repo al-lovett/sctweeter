@@ -10,11 +10,11 @@
         <textarea name="comment" rows="8" cols="80">{{ $comment->comments }}</textarea><br />
 
 
-        <button type="submit" name="button">Update Comment</button>
+        <button type="submit" name="button" class="btn btn-success">Update Comment</button><br><br>
     </form>
     <form method="POST" action="{{ route( 'comment.destroy', $comment->id ) }}">
       @csrf
-        <input type="submit" name="delete" value="Delete Comment">
+        <input type="submit" name="delete" value="Delete Comment" class="btn btn-success">
     </form>
 
 </div>

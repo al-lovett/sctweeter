@@ -23,43 +23,21 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 </head>
 <body>
+  @include('inc.navbar')
+  <!-- <div class="navbar-nav">
+  <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Ne)</span></a>
+  <a class="nav-item nav-link" href="#">User Profile PG</a>
+  <a class="nav-item nav-link" href="#">Pricing</a>
+  <nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  </div> -->
 
 
 
 
-                <div class="container-col-lg-12">
-                    <a class="badge badge-danger" href="{{ url('/') }}">
-                      {{ config('app.name', 'Sapientia Commutationem') }}
-                    </a>
-                    <ul class="nav nav-pills">
-                        @guest
-                            <li class="nav-item">
-                                <a href="{{ route('login') }}" class="badge badge-success">{{ __('Login') }}</a>
-                            </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="badge badge-success" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item">
-                                <a id="" class="badge badge-success" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                            </li>
-                  <div class="nav-item" aria-labelledby="">
-                      <a class="badge badge-success" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                          {{ __('Logout') }}
-                      </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                  </form>
-                  </div>
-                    @endguest
-                  </ul>
-                </div>
         <main class="py-4">
             @yield('content')
         </main>

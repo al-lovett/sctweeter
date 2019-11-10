@@ -15,7 +15,7 @@
     <body>
 
         <div id="splash" class="container-fluid">
-          <div id="" style="text-align:center; font-size: 50px;">
+          <div id="homelink">
               @if (Route::has('login'))
 
                       @auth
@@ -30,15 +30,22 @@
 
               @endif
           </div>
-
+          <header>
           <h1 id="headline" alt="the worlds first social media wisdome exchange">Sapientia Commutationem - Wisdom Exchange</h1>
 
 
           <h3>Welcome to the webs first social media wisdom exchange!</h3>
           <img src="images/SC.jpg" alt="The Creation of Adam by Michelangelo" class="responsive"> <br> <br>
-
-
-
+          <div id="market1">
+            <article name="what is wisdom">
+              Wisdom, sapience, or sagacity is the ability to think and act using knowledge, experience, understanding,
+              common sense and insight. Wisdom is associated with attributes such as unbiased judgment, compassion,
+              experiential self-knowledge, self-transcendence and non-attachment, and virtues such as ethics and
+              benevolence. Wisdom has been defined in many different ways, including several distinct approaches to
+              assess the characteristics attributed to wisdom.
+            </article>
+          </div>
+          </header>
           <div class="card" id="quote1">
             <div class="card-header">
               Sapientia Commutationem
